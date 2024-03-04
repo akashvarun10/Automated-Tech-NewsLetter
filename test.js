@@ -56,3 +56,13 @@ async function main() {
 }
 
 main().catch(console.error);
+/*
+Replace 'YOUR_CHANNEL_URL', 'your@gmail.com', 'your_password', and 'recipient@example.com' with your actual channel URL, 
+Gmail email address, Gmail password (or an app-specific password), and the recipient's email address.
+Please note that using your Gmail password directly in the code is not recommended for security reasons. 
+Instead, consider using an app-specific password generated in your Google Account settings. 
+Additionally, you may need to enable "Less secure app access" in your Google Account 
+security settings or use OAuth2 for more secure authentication.   
+*/ 
+
+
