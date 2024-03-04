@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channel Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Channel Explorer</h1>
+            <p>Discover and select your favorite YouTube channels.</p>
+        </header>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter search query...">
+            <button onclick="searchChannels()">Search</button>
+        </div>
+        <div id="results"></div>
+        <h2>Selected Channels</h2>
+        <ul id="selectedChannels"></ul>
+        <div id="warning"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
