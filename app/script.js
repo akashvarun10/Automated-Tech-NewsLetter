@@ -8,7 +8,7 @@ function searchChannels() {
     warningDiv.innerHTML = '';
 
     // You can replace 'YOUR_API_KEY' with your actual YouTube Data API key
-    const apiKey = 'AIzaSyA9hyG8URGR5Bi63a5AgDdv4Z34SJsyiCc';
+    const apiKey = 'your_api_key';
 
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchInput}&type=channel&key=${apiKey}`)
         .then(response => response.json())
