@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summary</title>
+</head>
+<body>
+    <h1>YouTube Video Summary</h1>
+    <form action="/fetch_videos" method="post">
+        <label for="channel_to_follow">Enter YouTube Channel Name:</label>
+        <input type="text" id="channel_to_follow" name="channel_to_follow" required>
+        <button type="submit">Fetch Latest Videos</button>
+    </form>
+    
+    {% if video_titles %}
+    <form action="/send_summary" method="post">
+        <label for="video_index">Select Video to Summarize:</label>
+        <select id="video_index" name="video_index" required>
+            {% for index, title in enumerate(video_titles) %}
+                <option value="{{ index }}">{{ title }}</option>
+            {% endfor %}
+        </select>
+        <label for="receiver_emails">Enter Receiver Email(s) (comma-separated):</label>
+        <input type="email" id="receiver_emails" name="receiver_emails" required>
+        <button type="submit">Summarize Video</button>
+    </form>
+    {% endif %}
+</body>
+</html>
